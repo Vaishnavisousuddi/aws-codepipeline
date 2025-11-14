@@ -9,7 +9,10 @@ phases:
     commands:
       - echo Build started
       - mvn clean package -DskipTests
+
 artifacts:
   files:
     - target/demo-1.0.jar
-  discard-paths: yes
+    - appspec.yml
+    - scripts/**/*
+  discard-paths: no
